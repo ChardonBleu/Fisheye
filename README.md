@@ -45,15 +45,11 @@ https://chardonbleu.github.io/
 
 Ressources:
 
-- Cours [Apprenez à programmer avec JavaScript](https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript).
+- Cours [Concevez un contenu accessible](https://openclassrooms.com/fr/courses/6691346-concevez-un-contenu-web-accessible).
 
-- Cours [Créez des pages web dynamiques avec JavaScript](https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript).
+- Cours [Codez un site web accessible avec HTML & CSS](https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css).
 
-- Cours [Déboguez l’interface de votre site internet](https://openclassrooms.com/fr/courses/7159296-deboguez-l-interface-de-votre-site-internet).
-
-- Tutoriel [Développement du JavaScript d'une page Web](https://openclassrooms.com/fr/paths/877/projects/807/708-tutoriel-pas-a-pas).
-
-- webinaire [Utilisez JavaScript pour réaliser un site dynamique](https://app.livestorm.co/openclassrooms-1/utilisez-javascript-pour-realiser-un-site-dynamique/live?s=ce585089-cab6-4fe1-b9ee-86fa8a0880f8#/chat).
+- Cours [Utiliser des design patterns en JavaScript](https://openclassrooms.com/fr/courses/7133336-utilisez-des-design-patterns-en-javascript).
 
 - Livre Javascript - Philip Ackermann - Rheinwerk Computing
 
