@@ -1,34 +1,43 @@
-#contact_modal {
+.contact_modal {
   display: none;
+  background-color: var(--modal-bg);
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  
 }
 
 .photograph-header {
-  background-color: #fafafa;
+  background-color: var(--light-grey);
   height: 300px;
   margin: 0 100px;
 }
 
 .contact_button {
-  font-size: 20px;
+  font-size: 1.111em;
   font-weight: bold;
   color: white;
   padding: 11px;
   width: 170px;
   height: 70px;
   border: none;
-  background-color: #901c1c;
+  background-color: var(--dark-red);
   border-radius: 5px;
   cursor: pointer;
 }
 
 .modal {
   border-radius: 5px;
-  background-color: #db8876;
+  background-color: var(--salmon);
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 35px;
   margin: auto;
 }
@@ -43,7 +52,7 @@
 }
 
 .modal header h2 {
-  font-size: 64px;
+  font-size: 3.556em;
   font-weight: normal;
   text-align: center;
 }
@@ -56,8 +65,8 @@ form {
 }
 
 form label {
-  color: #312e2e;
-  font-size: 36px;
+  color: var(--dark-brown);
+  font-size: 2em;
 }
 
 form div {
@@ -73,4 +82,8 @@ form input {
   height: 68px;
   border: none;
   border-radius: 5px;
+}
+
+.show {
+  display: flex;
 }

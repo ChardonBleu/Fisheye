@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "DMSans-Regular";
+    src: url("../fonts/DMSans-VariableFont.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 400;
+  }
+  
+@font-face {
+    font-family: "DMSans-Medium";
+    src: url("../fonts/DMSans-VariableFont.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "DMSans-Bold";
+    src: url("../fonts/DMSans-VariableFont.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 800;
+    }
+
+
+:root {
+    --dm-sans-regular: DMSans-Regular, Arial, Helvetica, sans-serif;
+    --dm-sans-medium: DMSans-Medium, Arial, Helvetica, sans-serif;
+    --dm-sans-bold: DMSans-Bold, Arial, Helvetica, sans-serif;
+
+    --light-grey: #fafafa;
+    --medium-grey: #757575;
+    --dark-grey: #525252;
+    --dark-red: #901c1c;
+    --salmon: #DB8876;
+    --light-brown: #D3573C;
+    --dark-brown: #312e2e;
+    --modal-bg: rgba(196, 196, 196, 0.4)
+}
