@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
-function displayModal() {
-  const modal = document.getElementById("contact_modal");
-  modal.style.display = "block";
+const modal = document.querySelector(".contact_modal");
+
+export function displayModal() {
+  modal.classList.add("show");
 }
 
-function closeModal() {
-  const modal = document.getElementById("contact_modal");
-  modal.style.display = "none";
+export function closeModal() {
+  modal.classList.remove("show");
 }

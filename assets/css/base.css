@@ -1,0 +1,19 @@
+body {
+  font-family: var(--dm-sans-regular);
+  font-size: 18px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+h1 {
+  color: var(--dark-red);
+  margin-right: 100px;
+  font-style: 2em;
+}
