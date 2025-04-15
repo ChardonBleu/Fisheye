@@ -1,6 +1,62 @@
-# Base de code du projet P6 - Parcours Front-end
+# ![FishEye](assets/images/logo.png)
 
-## Démarrer le projet
+Ce dépôt correspond au Projet 5 de la formation Javascript React d'Openclassrooms.
 
-Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
+Il s'agit d'un site d'un groupement de photographes indépendants.
 
+## Exécution en local
+
+Cloner le dépôt dans le dossier de votre choix:
+
+```bash
+git clone https://github.com/ChardonBleu/Fisheye
+```
+
+puis activer le live serveur (VS Code).  
+La page index.html devrait s'ouvir dans votre navigateur par défaut sur l'adresse:
+
+```bash
+127.0.0.1:5500
+```
+
+Eventuellement installer les dépendances( linter et prettier):
+
+```bash
+npm install
+```
+
+Pour excuter eslint:
+
+```bash
+npm run lint
+```
+
+Pour excuter prettier:
+
+```bash
+npm run fmt
+```
+
+## Hébergement GitHub
+
+https://chardonbleu.github.io/
+
+## Sources utilisées:
+
+Ressources:
+
+- Cours [Apprenez à programmer avec JavaScript](https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript).
+
+- Cours [Créez des pages web dynamiques avec JavaScript](https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript).
+
+- Cours [Déboguez l’interface de votre site internet](https://openclassrooms.com/fr/courses/7159296-deboguez-l-interface-de-votre-site-internet).
+
+- Tutoriel [Développement du JavaScript d'une page Web](https://openclassrooms.com/fr/paths/877/projects/807/708-tutoriel-pas-a-pas).
+
+- webinaire [Utilisez JavaScript pour réaliser un site dynamique](https://app.livestorm.co/openclassrooms-1/utilisez-javascript-pour-realiser-un-site-dynamique/live?s=ce585089-cab6-4fe1-b9ee-86fa8a0880f8#/chat).
+
+- Livre Javascript - Philip Ackermann - Rheinwerk Computing
+
+## Remerciements
+
+Un très grand merci à Herbert Caffarel pour ses précieux conseils et retours.
