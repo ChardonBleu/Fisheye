@@ -19,22 +19,23 @@ La page index.html devrait s'ouvir dans votre navigateur par défaut sur l'adres
 127.0.0.1:5500
 ```
 
-Eventuellement installer les dépendances( linter et prettier):
-
+Eventuellement installer les dépendances( linter et prettier):  
 ```bash
 npm install
 ```
 
-Pour excuter eslint:
-
+Pour excuter eslint:  
 ```bash
 npm run lint
 ```
 
-Pour excuter prettier:
-
+Pour excuter prettier:  
 ```bash
 npm run fmt
+```
+Pour fixer les erreurs du prettier:   
+```bash
+npm run fmt:fix
 ```
 
 ## Hébergement GitHub
