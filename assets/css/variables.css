@@ -9,14 +9,14 @@
   font-family: "DMSans-Medium";
   src: url("../fonts/DMSans-VariableFont.ttf") format("truetype");
   font-display: swap;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "DMSans-Bold";
   src: url("../fonts/DMSans-VariableFont.ttf") format("truetype");
   font-display: swap;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 :root {

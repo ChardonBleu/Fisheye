@@ -8,7 +8,8 @@ export default function photographerTemplate(data) {
   const article = document.createElement("article");
 
   const userCard = `
-    <img src="${picture}" alt="${name} portrait" class="portrait"/>
+    <div  class="portrait"><img src="${picture}" alt="${name} portrait"/></div>
+    <div  class="portrait shadow"><img src="${picture}" alt=""/></div>
     <h2>${name}</h2>
     <p class="location">${city}, ${country}</p>
     <p class="tag">${tagline}</p>
