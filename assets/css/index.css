@@ -1,6 +1,21 @@
+.nav-link {
+  margin-left: 100px;
+  padding: 0px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+
+.nav-link:focus {
+  margin-left: 100px;
+  padding: 0px;
+  animation: underline 0.3s ease-in-out both;
+}
+
 .logo {
   height: 50px;
-  margin-left: 100px;
+  padding: 4px;
+  margin: auto;
 }
 
 .photographer_section {
@@ -11,7 +26,15 @@
 }
 
 .photographer_section article {
-  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.photographer_section article a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +42,14 @@
   padding: 0;
   margin: 0;
   position: relative;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
+
+.photographer_section article a:hover,
+.photographer_section article a:focus {
+  animation: underline 0.3s ease-in-out both;
 }
 
 .photographer_section article h2 {
@@ -36,7 +67,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-
 }
 
 .shadow {
@@ -59,7 +89,7 @@
 }
 
 .shadow img {
-    transform: translateY(-200px);
+  transform: translateY(-200px);
 }
 
 .portrait img {
@@ -88,6 +118,15 @@
 
 @media screen and (max-width: 992px) {
   .photographer_section article h2 {
-    font-size: 1em;
+    font-size: 1.3em;
+  }
+}
+
+@keyframes underline {
+  0% {
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-bottom-color: var(--dark-red);
   }
 }
