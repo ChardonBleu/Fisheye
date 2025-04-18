@@ -1,4 +1,4 @@
-import photographerTemplate from "../components/photographerCard.js";
+import indexPhotographerTemplate from "../components/indexPhotographerCard.js";
 import getDatas from "../utils/api.js";
 import { dataJsonURL } from "../utils/constants.js";
 
@@ -6,7 +6,7 @@ export default async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
 
   photographers.forEach((photographer) => {
-    const photographerCard = photographerTemplate(photographer);
+    const photographerCard = indexPhotographerTemplate(photographer);
     photographersSection.appendChild(photographerCard);
   });
 }
