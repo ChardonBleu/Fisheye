@@ -1,9 +1,9 @@
-import constants from "../utils/constants.js";
+import { portraitURL } from "../utils/constants.js";
 
 export default function photographerTemplate(data) {
   const { id, name, city, country, tagline, price, portrait } = data;
 
-  const picture = constants.portraitURL + `${portrait}`;
+  const picture = portraitURL + `${portrait}`;
 
   const article = document.createElement("article");
 

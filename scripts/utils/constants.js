@@ -1,5 +1,4 @@
 const portraitURL = `assets/photographers/`;
+const dataJsonURL = `data/photographers.json`;
 
-export default {
-  portraitURL,
-};
+export { portraitURL, dataJsonURL };
