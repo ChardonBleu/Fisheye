@@ -48,7 +48,8 @@
   gap: 20px 8%;
 }
 
-.artist-media img {
+.artist-media img,
+.artist-media video {
   object-fit: cover;
   width: 100%;
   aspect-ratio: 1.15;
@@ -150,5 +151,9 @@ form input {
 }
 
 .show {
+  display: flex;
+}
+
+.mask {
   display: flex;
 }
