@@ -50,10 +50,10 @@ class App {
   }
 
   async main() {
-    if (new URL(document.location).pathname == "/index.html") {
+    if (new URL(document.location).pathname == "/index.html" || new URL(document.location).pathname == "/Fisheye") {
       await this.fetchPhotographers();
       displayIndexPhotographers(this.photographers);
-    } else if (new URL(document.location).pathname == "/photographer.html") {
+    } else if (new URL(document.location).pathname == "/photographer.html" || new URL(document.location).pathname == "/Fisheye/photographer.html") {
       await this.fetchMedias();
       displayMediaPhotographer(this.artist, this.artistMedias);
       manageModalForm();
