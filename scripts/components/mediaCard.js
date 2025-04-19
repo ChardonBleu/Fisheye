@@ -13,7 +13,7 @@ export default function mediaTemplate(data, artistName) {
       <div class="media-info">
         <h2>${data.title}</h2> 
         <p class="likes" tabindex="0">${data.likes}</p>
-        <i class="heart">@</i>
+        <i class="heart fa-solid fa-heart"></i>
       </div>
     `;
 
@@ -22,11 +22,12 @@ export default function mediaTemplate(data, artistName) {
     return article;
   } else if (data.video) {
     const artistInfo = `
-    <div class="media-info">
-      <h2>${data.title}</h2> 
-      <p class="likes" tabindex="0">${data.likes}</p>
-      <i class="heart">@</i>
-    </div>
+      <div  class="original-media artist-media"></div>
+      <div class="media-info">
+        <h2>${data.title}</h2> 
+        <p class="likes" tabindex="0">${data.likes}</p>
+        <i class="heart fa-solid fa-heart"></i>
+      </div>
     `;
 
     article.innerHTML = artistInfo;
