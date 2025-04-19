@@ -1,7 +1,7 @@
 import { portraitURL } from "../utils/constants.js";
 
 export default function photographerInfoTemplate(data) {
-  const picture = portraitURL + `${data.portrait}`;  
+  const picture = portraitURL + `${data.portrait}`;
 
   const artistInfo = `
     <div class="artist-info">
@@ -13,7 +13,5 @@ export default function photographerInfoTemplate(data) {
     <div  class="portrait"><img src="${picture}" alt=""/></div>   
   `;
 
-  return artistInfo
-  
+  return artistInfo;
 }
-

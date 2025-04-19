@@ -6,7 +6,7 @@
   border-bottom-color: transparent;
 }
 
-.nav-link:focus {
+.nav-link:focus, .nav-link:hover {
   margin-left: 100px;
   padding: 0px;
   animation: underline 0.3s ease-in-out both;
