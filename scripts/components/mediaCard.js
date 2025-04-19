@@ -7,7 +7,6 @@ export default function mediaTemplate(data, artistName) {
   if (data.image) {
     const picture = mediaURL + `${folder}/${data.image}`;
 
-
     const artistInfo = `
       <div  class="original-media artist-media"><img src="${picture}" alt=""/></div>
 
@@ -20,9 +19,9 @@ export default function mediaTemplate(data, artistName) {
 
     article.innerHTML = artistInfo;
 
-    return article
+    return article;
   } else if (data.video) {
-      const artistInfo = `
+    const artistInfo = `
     <div class="media-info">
       <h2>${data.title}</h2> 
       <p class="likes" tabindex="0">${data.likes}</p>
@@ -30,11 +29,9 @@ export default function mediaTemplate(data, artistName) {
     </div>
     `;
 
-  article.innerHTML = artistInfo;
+    article.innerHTML = artistInfo;
 
-  return article
+    return article;
   }
-  return article
-
+  return article;
 }
-
