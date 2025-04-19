@@ -1,4 +1,8 @@
-import { dataJsonURL } from "./utils/constants.js";
+import {
+  dataJsonURL,
+  indexUrlList,
+  photographerUrlList,
+} from "./utils/constants.js";
 import { Artist } from "./models/Artist.js";
 import { MediaFactory } from "./factories/mediaFactory.js";
 import { displayIndexPhotographers } from "./pages/index.js";
@@ -50,10 +54,12 @@ class App {
   }
 
   async main() {
-    if (new URL(document.location).pathname == "/index.html" || new URL(document.location).pathname == "/Fisheye") {
+    if (indexUrlList.includes(new URL(document.location).pathname)) {
       await this.fetchPhotographers();
       displayIndexPhotographers(this.photographers);
-    } else if (new URL(document.location).pathname == "/photographer.html" || new URL(document.location).pathname == "/Fisheye/photographer.html") {
+    } else if (
+      photographerUrlList.includes(new URL(document.location).pathname)
+    ) {
       await this.fetchMedias();
       displayMediaPhotographer(this.artist, this.artistMedias);
       manageModalForm();
