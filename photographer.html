@@ -30,20 +30,20 @@
     <main id="main">
       <article class="photograph-header"></article>
 
-      <div class="filter-form">
-        <div class="label">Trier par :</div>
-        <div class="select">
-          <div class="option">
+      <div  class="filter-form filter-form_shadow" aria-label="zone de tri des photos">
+        <div class="label" tabindex="0">Trier par :</div>
+        <div class="select select_shadow" aria-label="options de filtration">
+          <div class="option" aria-label="filtrer par popularité" tabindex="0">
             Popularité<i class="fa-solid fa-chevron-down"></i>
           </div>
-          <div class="option">Date</div>
-          <div class="option">Titre</div>
+          <div class="option" aria-label="filtrer par date" tabindex="0">Date</div>
+          <div class="option" aria-label="filtrer par titre de la photo" tabindex="0">Titre</div>
         </div>
       </div>
 
-      <section class="galery"></section>
+      <section class="galery aria-label="galerie du photographe"></section>
 
-      <aside class="artist-level"></aside>
+      <aside class="artist-level" aria-label="popularité et tarif journalier"></aside>
     </main>
 
     <div class="contact_modal">
@@ -55,7 +55,7 @@
         <form>
           <div>
             <label>Prénom</label>
-            <input />
+            <input >
           </div>
           <button class="contact_button">Envoyer</button>
         </form>
