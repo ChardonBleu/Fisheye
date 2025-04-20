@@ -35,7 +35,8 @@ h2 {
   font-weight: normal;
 }
 
-p:focus, div:focus {
+p:focus,
+div:focus {
   border: none;
   transform: scale(1.1);
   transition: transform 0.3s ease;

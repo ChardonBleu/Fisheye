@@ -55,12 +55,12 @@ export class Artist {
   }
 
   displayAsideInfo() {
-    const totalLikes = 100;  // TODO ajouter la fonction de calcul du total de likes
-    const aside = document.querySelector(".artist-level")
+    const totalLikes = 100; // TODO ajouter la fonction de calcul du total de likes
+    const aside = document.querySelector(".artist-level");
     const asideContent = `
       <p aria-label="total des likes du photographe" tabindex="0">${totalLikes}<i class="fa-heart fa-solid"></i></p>
       <p aria-label="tarif du photographe" tabindex="0">${this.price}€/jour</p>
-    `
-    aside.innerHTML = asideContent
+    `;
+    aside.innerHTML = asideContent;
   }
 }
