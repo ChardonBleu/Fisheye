@@ -30,22 +30,54 @@
     <main id="main">
       <article class="photograph-header"></article>
 
-      <div  class="filter-form filter-form_shadow" aria-label="zone de tri des photos">
-        <div class="label" tabindex="0">Trier par :</div>
-        <div class="select" aria-label="options de filtration">  <!--  .select_shadow  -->
-          <div class="option" aria-label="filtrer par popularité" tabindex="0">
+      <div
+        class="filter-form filter-form_shadow"
+        aria-label="zone de tri des photos"
+        role="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+      >
+        <div class="label" tabindex="0" id="label">Trier par :</div>
+        <div
+          class="select"
+          aria-label="options de filtration"
+          role="listbox"
+          aria-activedescendant="popularity"
+          aria-labelledby="label"
+        >
+          <!--  select_shadow  -->
+
+          <div
+            class="option"
+            id="popularity"
+            aria-label="filtrer par popularité"
+            tabindex="0"
+            aria-selected="true"
+          >
             Popularité
             <i class="fa-solid fa-chevron-down"></i>
             <i class="fa-solid fa-chevron-up mask"></i>
           </div>
-          <div class="option mask" aria-label="filtrer par date" tabindex="0">Date</div>
-          <div class="option mask" aria-label="filtrer par titre de la photo" tabindex="0">Titre</div>
+          <div class="option mask" aria-label="filtrer par date" tabindex="0" aria-selected="true">
+            Date
+          </div>
+          <div
+            class="option mask"
+            aria-label="filtrer par titre de la photo"
+            tabindex="0"
+            aria-selected="true"
+          >
+            Titre
+          </div>
         </div>
       </div>
 
-      <section class="galery aria-label="galerie du photographe"></section>
+      <section class="galery" aria-label="galerie du photographe"></section>
 
-      <aside class="artist-level" aria-label="popularité et tarif journalier"></aside>
+      <aside
+        class="artist-level"
+        aria-label="popularité et tarif journalier"
+      ></aside>
     </main>
 
     <div class="contact_modal">
@@ -57,7 +89,7 @@
         <form>
           <div>
             <label>Prénom</label>
-            <input >
+            <input />
           </div>
           <button class="contact_button">Envoyer</button>
         </form>
