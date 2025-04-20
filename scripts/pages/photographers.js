@@ -3,6 +3,7 @@ import mediaTemplate from "../components/mediaCard.js";
 
 export function displayMediaPhotographer(artist, artistMedias) {
   artist.displayArtistInfo();
+  artist.displayAsideInfo();
 
   const galery = document.querySelector(".galery");
   artistMedias.forEach((media) => {
