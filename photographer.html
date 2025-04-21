@@ -20,22 +20,15 @@
         class="nav-link"
         aria-label="navigation vers page accueil FishEye"
       >
-        <img
-          src="assets/images/logo.png"
-          class="logo"
-          alt="Fisheye logo"
-        />
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye logo" />
       </a>
     </header>
     <main id="main" aria-hidden="false">
       <article class="photograph-header"></article>
 
-      <div
+      <!-- <div
         class="filter-form filter-form_shadow"
         aria-label="zone de tri des photos"
-        role="button"
-        aria-haspopup="listbox"
-        aria-expanded="false"
       >
         <div class="label" id="label">Trier par :</div>
         <div
@@ -44,9 +37,11 @@
           role="listbox"
           aria-activedescendant="popularity"
           aria-labelledby="label"
-        >
-          <!--  select_shadow  -->
-
+          aria-haspopup="listbox"
+          aria-expanded="false"
+        > -->
+      <!--  select_shadow  -->
+      <!-- 
           <div
             class="option"
             id="popularity"
@@ -55,10 +50,15 @@
             aria-selected="true"
           >
             Popularité
-            <i class="fa-solid fa-chevron-down"></i>
-            <i class="fa-solid fa-chevron-up mask"></i>
+            <i class="fa-solid fa-chevron-down" role="button"></i>
+            <i class="fa-solid fa-chevron-up mask" role="button"></i>
           </div>
-          <div class="option mask" aria-label="filtrer par date" tabindex="0" aria-selected="true">
+          <div
+            class="option mask"
+            aria-label="filtrer par date"
+            tabindex="0"
+            aria-selected="true"
+          >
             Date
           </div>
           <div
@@ -70,7 +70,7 @@
             Titre
           </div>
         </div>
-      </div>
+      </div> -->
 
       <section class="galery" aria-label="galerie du photographe"></section>
 

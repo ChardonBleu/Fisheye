@@ -9,7 +9,7 @@ import { displayIndexPhotographers } from "./pages/index.js";
 import {
   displayMediaPhotographer,
   manageModalForm,
-  displayModalForm
+  displayModalForm,
 } from "./pages/photographers.js";
 
 class App {
@@ -48,7 +48,7 @@ class App {
         .filter((elt) => elt.photographerId == photographerId && elt.video)
         .map((video) => new MediaFactory(video, this.artist, "video"));
 
-      this.artistMedias = images.concat(videos);
+      this.artistMedias = videos.concat(images);
     } else {
       throw new Error("HTTP-Error: " + response.status);
     }
@@ -63,7 +63,7 @@ class App {
     ) {
       await this.fetchMedias();
       displayMediaPhotographer(this.artist, this.artistMedias);
-      displayModalForm(this.artist)
+      displayModalForm(this.artist);
       manageModalForm();
     }
   }

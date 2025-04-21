@@ -1,29 +1,43 @@
 export default function formTemplate(artist) {
-    const article = document.createElement("article");
-  
-    const artistInfo = `
+  const article = document.createElement("article");
+
+  const artistInfo = `
     <div class="contact_modal" aria-hidden="true">
       <div class="modal" role="dialog" aria-labelledby="title-modal">
         <header>
-          <h2 id="title-modal">Contactez-moi<br>${artist.name}</h2>
-          <img tabindex="0" class="close-modal" src="assets/icons/close.svg" alt="close modal" />
+          <h2 tabindex="0" id="title-modal" >Contactez-moi<br>${artist.name}</h2>
+          <img tabindex="0" class="close-modal" src="assets/icons/close.svg" alt="close modal: echap key" />
         </header>
-        <form>
+        <form action="photographer.html?${artist.id}" method="get">
           <label for="first-name">Prénom</label>
-          <input id="first-name" type="text" name="first-name">
+          <input aria-label="Prénom: requis - au moins 2 caractères"
+                  class="field" id="first-name"
+                  type="text"
+                  name="first-name"
+                  minlength="2"
+                  required>
+
           <label for="last-name">Nom</label>
-          <input id="last-name" type="text" name="last-name">
+        <input aria-label="Nom: requis - au moins 2 caractères"
+               class="field" id="last-name"
+               type="text"
+               name="last-name"
+               minlength="2"
+               required>
+
           <label for="mail">Email</label>
-          <input id="mail" type="email" name="mail">
+          <input class="field" id="mail" type="email" name="mail">
+
           <label for="message">Votre message</label>
-          <textarea id="message" type="text" name="message"></textarea>
-          <button class="contact_button">Envoyer</button>
+          <textarea class="field" id="message" type="text" name="message"></textarea> 
+
+          <button class="form-button">Envoyer</button>
         </form>
       </div>
     </div>
     `;
-  
-    article.innerHTML = artistInfo;
-  
-    return article;
-  }
+
+  article.innerHTML = artistInfo;
+
+  return article;
+}
