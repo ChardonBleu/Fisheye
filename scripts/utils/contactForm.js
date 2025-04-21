@@ -1,19 +1,16 @@
-const modal = document.querySelector(".contact_modal");
-const main = document.getElementById("main")
+const main = document.getElementById("main");
 
-export function displayModal(closeModalBtn) {
-  console.log("dans display modal");
+export function displayModal(closeModalBtn, modal) {
+  const modalTitle = document.querySelector(".modal header h2");
   modal.classList.add("show");
   modal.setAttribute("aria-hidden", "false");
-  main.setAttribute("aria-hidden", "true")
-  closeModalBtn.focus()
-
+  main.setAttribute("aria-hidden", "true");
+  modalTitle.focus();
 }
 
-export function closeModal(contactBtn) {
-  console.log("dans close modal");
+export function closeModal(contactBtn, modal) {
   modal.classList.remove("show");
-  modal.setAttribute("aria-hidden", "true")
+  modal.setAttribute("aria-hidden", "true");
   main.setAttribute("aria-hidden", "false");
-  contactBtn.focus()
+  contactBtn.focus();
 }

@@ -145,7 +145,7 @@
   right: 0px;
 }
 
-.contact_button {
+button {
   font-size: 1.111em;
   font-weight: bold;
   color: white;
@@ -160,6 +160,7 @@
 
 .contact_button:hover,
 .contact_button:focus {
+  border: none;
   animation: contact 0.3s ease-in-out both;
 }
 
@@ -168,33 +169,39 @@
   border-radius: 5px;
   background-color: var(--salmon);
   width: 50%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 35px;
+  padding: 40px;
   margin: auto;
 }
 
 .close-modal:focus {
-  outline: none;
-  border:none;
+  border-color: var(--dark-red);
 }
 
 .modal header {
-  justify-content: space-between;
   width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
 }
 
 .modal header img {
   outline: none;
   cursor: pointer;
+  align-self: start;
 }
 
 .modal header h2 {
   font-size: 3.556em;
   font-weight: normal;
-  text-align: center;
+  text-align: left;
+}
+
+.modal header h2:focus {
+  border: none;
 }
 
 form {
@@ -223,6 +230,12 @@ form input {
   border: none;
   border-radius: 5px;
   margin-bottom: 5px;
+  font-family: var(--dm-sans-regular);
+  font-size: 2em;
+}
+
+form input:focus {
+  border-color: var(--dark-red);
 }
 
 form textarea {
@@ -230,10 +243,24 @@ form textarea {
   height: 170px;
   border: none;
   border-radius: 5px;
+  font-family: var(--dm-sans-regular);
+  font-size: 2em;
+}
+
+form textarea:focus {
+  border-color: var(--dark-red);
 }
 
 form button {
   margin-top: 30px;
+}
+
+.form-button:hover,
+.form-button:focus {
+  border-style: solid;
+  animation: contact 0.3s ease-in-out both;
+  border-color: var(--dark-red);
+  box-shadow: 1px 1px 2px 1px rgba(144, 28, 28, 0.5);
 }
 
 .artist-level {
