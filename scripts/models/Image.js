@@ -22,8 +22,8 @@ export class ArtistImage {
 
   get mediaElement() {
     const folder = this._artist.name.split(" ").join("");
-    const picture = mediaURL + `${folder}/${this._image}`;
-    return `<img src="${picture}" alt=""/>`;
+    const picture = mediaURL + `${folder}/${this._image.slice(0, -4)}_mini.jpg`;
+    return `<img src="${picture}" height="100%"/>`;
   }
 
   get likes() {

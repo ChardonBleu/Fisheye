@@ -13,9 +13,9 @@ export default function indexPhotographerTemplate(data) {
         <div  class="portrait shadow" aria-hidden="true"><img src="${picture}" alt=""/></div>
         <h2>${data.name}</h2>
     </a>   
-    <p class="location" tabindex="0">${data.city}, ${data.country}</p>
-    <p class="tag" tabindex="0">${data.tagline}</p>     
-    <p class="price" tabindex="0"s>${data.price}€/jour</p>
+    <p class="location">${data.city}, ${data.country}</p>
+    <p class="tag">${data.tagline}</p>     
+    <p class="price">${data.price}€/jour</p>
   `;
   article.innerHTML = userCard;
 
