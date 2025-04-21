@@ -71,33 +71,32 @@
 }
 
 .shadow {
-  height: 210px;
+  height: 220px;
   -webkit-mask-image: radial-gradient(
-    circle 195px at center,
+    circle 203px at center,
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0),
     transparent
   );
   mask-image: radial-gradient(
-    circle 195px at center,
+    circle 203px at center,
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0),
     transparent
   );
   position: absolute;
   z-index: -10;
-  top: 10px;
+  top: 0px;
 }
 
 .shadow img {
-  transform: translateY(-200px);
+  transform: translateY(-10px)
 }
 
 .portrait img {
   text-align: center;
-  scale: 0.075;
-
   border-radius: 50%;
+
 }
 
 .location {

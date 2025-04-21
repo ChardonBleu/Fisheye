@@ -23,7 +23,7 @@ export class ArtistVideo {
   get mediaElement() {
     const folder = this._artist.name.split(" ").join("");
     const picture = mediaURL + `${folder}/${this._video}`;
-    return `<video src="${picture}#t=0" ></video>`;
+    return `<video src="${picture}#t=0" height="100%"></video>`;
   }
 
   get likes() {
