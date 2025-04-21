@@ -9,6 +9,7 @@ import { displayIndexPhotographers } from "./pages/index.js";
 import {
   displayMediaPhotographer,
   manageModalForm,
+  displayModalForm
 } from "./pages/photographers.js";
 
 class App {
@@ -62,6 +63,7 @@ class App {
     ) {
       await this.fetchMedias();
       displayMediaPhotographer(this.artist, this.artistMedias);
+      displayModalForm(this.artist)
       manageModalForm();
     }
   }

@@ -4,8 +4,8 @@ export default function photographerInfoTemplate(data) {
   const picture = portraitURL + `${data.portrait}`;
 
   const artistInfo = `
-    <div class="artist-info" tabindex="0" aria-label="Galerie du photographe ${data.name}">
-      <h2>${data.name}</h2> 
+    <div class="artist-info" aria-label="Galerie du photographe ${data.name}">
+      <h2 tabindex="0">${data.name}</h2> 
       <p class="location" tabindex="0">${data.city}, ${data.country}</p>
       <p class="tag" tabindex="0">${data.tagline}</p>
     </div>
