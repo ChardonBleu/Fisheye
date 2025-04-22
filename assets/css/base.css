@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :focus {
   outline: none;
   border-bottom-width: 4px;
@@ -35,8 +39,7 @@ h2 {
   font-weight: normal;
 }
 
-p:focus,
-div:focus {
+p:focus {
   border: none;
   transform: scale(1.1);
   transition: transform 0.3s ease;
