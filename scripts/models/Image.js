@@ -20,10 +20,17 @@ export class ArtistImage {
     return this._date;
   }
 
+  get mediaThumbnail() {
+    const picture =
+      mediaURL + `${this.artistFolder()}/${this._image.slice(0, -4)}_mini.jpg`;
+    return `<img src="${picture}" height="100%" alt="image ${this._title}"/>`;
+  }
+
   get mediaElement() {
-    const folder = this._artist.name.split(" ").join("");
-    const picture = mediaURL + `${folder}/${this._image.slice(0, -4)}_mini.jpg`;
-    return `<img src="${picture}" height="100%"/>`;
+    const picture = mediaURL + `${this.artistFolder()}/${this._image}`;
+    return `<img src="${picture}" alt="photo ${this._title}"/>
+            <h2 aria-label="photo ${this._title}" aria-hidden="true" >${this._title}</h2>
+            `;
   }
 
   get likes() {
@@ -40,5 +47,9 @@ export class ArtistImage {
 
   get title() {
     return this._title;
+  }
+
+  artistFolder() {
+    return this._artist.name.split(" ").join("");
   }
 }

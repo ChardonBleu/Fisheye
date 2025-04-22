@@ -10,7 +10,9 @@ import {
   displayMediaPhotographer,
   manageModalForm,
   displayModalForm,
+  displayLightbox,
 } from "./pages/photographers.js";
+import { manageLightbox } from "./utils/lightbox.js";
 
 class App {
   constructor() {
@@ -57,14 +59,18 @@ class App {
   async main() {
     if (indexUrlList.includes(new URL(document.location).pathname)) {
       await this.fetchPhotographers();
+
       displayIndexPhotographers(this.photographers);
     } else if (
       photographerUrlList.includes(new URL(document.location).pathname)
     ) {
       await this.fetchMedias();
-      displayMediaPhotographer(this.artist, this.artistMedias);
+
       displayModalForm(this.artist);
+      displayMediaPhotographer(this.artist, this.artistMedias);
       manageModalForm();
+      displayLightbox(this.artistMedias);
+      manageLightbox();
     }
   }
 }
