@@ -54,8 +54,7 @@ export class Artist {
     article.innerHTML = artistInfo;
   }
 
-  displayAsideInfo() {
-    const totalLikes = 100; // TODO ajouter la fonction de calcul du total de likes
+  displayAsideInfo(totalLikes) {
     const aside = document.querySelector(".artist-level");
     const asideContent = `
       <p aria-label="total des likes du photographe" tabindex="0">

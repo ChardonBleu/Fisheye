@@ -13,6 +13,7 @@ import {
   displayLightbox,
 } from "./pages/photographers.js";
 import { manageLightbox } from "./utils/lightbox.js";
+import { manageLikes } from "./utils/likes.js";
 
 class App {
   constructor() {
@@ -66,11 +67,15 @@ class App {
     ) {
       await this.fetchMedias();
 
-      displayModalForm(this.artist);
+      this.artist.displayArtistInfo();
+
       displayMediaPhotographer(this.artist, this.artistMedias);
+      displayModalForm(this.artist);
       manageModalForm();
       displayLightbox(this.artistMedias);
       manageLightbox();
+      manageLikes(this.artist, this.artistMedias)
+     
     }
   }
 }

@@ -10,6 +10,7 @@ export class ArtistVideo {
     this._price = data.price;
     this._title = data.title;
     this._artist = artist;
+    this._alreadyLiked = false;
   }
 
   get id() {
@@ -53,4 +54,15 @@ export class ArtistVideo {
     const folder = this._artist.name.split(" ").join("");
     return folder;
   }
+
+  addLike() {
+    if (!this._alreadyLiked) {
+      this._likes += 1
+      this._alreadyLiked = true
+    }
+    else {
+      throw new Error("Vous avez déjà liké cette vidéo")
+    }
+  }
+
 }

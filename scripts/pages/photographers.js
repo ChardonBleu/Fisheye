@@ -4,9 +4,6 @@ import formTemplate from "../components/FormCard.js";
 import lightboxTemplate from "../components/lightboxCard.js";
 
 export function displayMediaPhotographer(artist, artistMedias) {
-  artist.displayArtistInfo();
-  artist.displayAsideInfo();
-
   const galery = document.querySelector(".galery");
   artistMedias.forEach((media) => {
     const mediaCard = mediaTemplate(media, artist.name);
