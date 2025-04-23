@@ -57,12 +57,14 @@ export class ArtistVideo {
 
   addLike() {
     if (!this._alreadyLiked) {
-      this._likes += 1
-      this._alreadyLiked = true
+      this._likes += 1;
+      this._alreadyLiked = true;
+      return true
+    } else if (this._alreadyLiked) {
+      this._likes -= 1;
+      this._alreadyLiked = false;
+      return false
     }
-    else {
-      throw new Error("Vous avez déjà liké cette vidéo")
-    }
-  }
 
+  }
 }

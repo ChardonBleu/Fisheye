@@ -10,7 +10,7 @@ export class ArtistImage {
     this._price = data.price;
     this._title = data.title;
     this._artist = artist;
-    this._alreadyLiked = false
+    this._alreadyLiked = false;
   }
 
   get id() {
@@ -56,11 +56,13 @@ export class ArtistImage {
 
   addLike() {
     if (!this._alreadyLiked) {
-      this._likes += 1
-      this._alreadyLiked = true
-    }
-    else {
-      throw new Error("Vous avez déjà liké cette photo")
+      this._likes += 1;
+      this._alreadyLiked = true;
+      return true
+    } else if(this._alreadyLiked) {
+      this._likes -= 1;
+      this._alreadyLiked = false;
+      return false
     }
   }
 }
