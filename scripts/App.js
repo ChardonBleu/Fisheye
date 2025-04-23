@@ -11,9 +11,12 @@ import {
   manageModalForm,
   displayModalForm,
   displayLightbox,
+  manageLightbox,
+  manageLikes,
+  manageNavigationSortMenu,
+  sortGalery
 } from "./pages/photographers.js";
-import { manageLightbox } from "./utils/lightbox.js";
-import { manageLikes } from "./utils/likes.js";
+
 
 class App {
   constructor() {
@@ -52,6 +55,7 @@ class App {
         .map((video) => new MediaFactory(video, this.artist, "video"));
 
       this.artistMedias = videos.concat(images);
+      this.artistMedias.sort((a, b) => {return b.likes - a.likes});
     } else {
       throw new Error("HTTP-Error: " + response.status);
     }
@@ -70,12 +74,17 @@ class App {
       this.artist.displayArtistInfo();
 
       displayMediaPhotographer(this.artist, this.artistMedias);
+
       displayModalForm(this.artist);
       manageModalForm();
+
       displayLightbox(this.artistMedias);
       manageLightbox();
+
+      manageNavigationSortMenu()
+      sortGalery(this.artist, this.artistMedias)
+      
       manageLikes(this.artist, this.artistMedias)
-     
     }
   }
 }

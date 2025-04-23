@@ -26,10 +26,7 @@
     <main id="main" aria-hidden="false">
       <article class="photograph-header"></article>
 
-      <div
-        class="filter-form filter-form_shadow"
-        aria-label="zone de tri des photos"
-      >
+      <div class="sort-menu filter-form_shadow">
         <div class="label" id="label">Trier par :</div>
         <div
           class="select"
@@ -40,34 +37,47 @@
           aria-haspopup="listbox"
           aria-expanded="false"
         >
-          <!--  select_shadow  -->
-
+          <!--  add select_shadow when expanded -->
           <div
             class="option"
-            id="popularity"
-            aria-label="filtrer par popularité"
+            aria-labeledby="likes"
             tabindex="0"
             aria-selected="true"
+            role="option"
           >
-            Popularité
-            <i class="fa-solid fa-chevron-down" role="button"></i>
-            <i class="fa-solid fa-chevron-up mask" role="button"></i>
+            <p id="likes" tabindex="0">Popularité</p>
+
+            <div
+            class="fa-solid fa-chevron-up mask"
+            role="button"
+            aria-label="close menu"
+            tabindex="0"
+            ></div>
+  
+            <div
+            class="fa-solid fa-chevron-down"
+            role="button"
+            aria-label="open menu"
+            tabindex="0"
+            ></div>
           </div>
+
           <div
             class="option mask"
-            aria-label="filtrer par date"
-            tabindex="0"
+            aria-labeledby="date"
             aria-selected="true"
+            role="option"
           >
-            Date
+            <p id="date" tabindex="0">Date</p>
           </div>
+
           <div
             class="option mask"
-            aria-label="filtrer par titre de la photo"
-            tabindex="0"
+            aria-labeledby="title"
             aria-selected="true"
+            role="option"
           >
-            Titre
+            <p id="title" tabindex="0">Titre</p>
           </div>
         </div>
       </div>

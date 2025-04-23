@@ -41,58 +41,8 @@
   color: var(--dark-grey);
 }
 
-.filter-form {
-  margin: 20px 100px 70px;
-  display: flex;
-  position: relative;
-}
-
-.filter-form .label {
-  font-family: var(--dm-sans-bold);
-  font-size: 1em;
-}
-
-.filter-form .label:focus {
-  transform: scale(1.1);
-}
-
-.filter-form .select {
-  font-family: var(--dm-sans-bold);
-  font-size: 1em;
-  background-color: var(--dark-red);
-  color: white;
-  border-radius: 5px;
-  padding: 10px 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: absolute;
-  left: 100px;
-  top: -10px;
-  width: 170px;
-}
-
 .select_shadow {
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.filter-form .select .option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--dm-sans-bold);
-  font-size: 1em;
-  color: white;
-  border-top-style: solid;
-  border-color: white;
-  border-width: 1px;
-  margin: 0 5px;
-  padding: 12px 10px;
-  padding-right: 5px;
-}
-
-.filter-form .select :nth-child(1) {
-  border: none;
 }
 
 .galery {
@@ -108,16 +58,12 @@
   width: 100%;
   aspect-ratio: 1.15;
   border-radius: 5px;
-  /* padding: 0;
-  margin:0; */
 }
 
 .artist-media {
   border-bottom-width: 4px;
   border-bottom-style: solid;
   border-color: transparent;
-  /* padding: 0;
-  margin:0; */
 }
 
 .artist-media:focus {
@@ -130,13 +76,14 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  color: var(--dark-red);
+  
   font-size: 1em;
   font-family: var(--dm-sans-regular);
 }
 
 .media-info h2 {
   font-size: 1.333em;
+  color: var(--dark-red);
   margin: 0;
   border-bottom-width: 4px;
   border-bottom-style: solid;
@@ -146,15 +93,22 @@
 .media-info .likes {
   padding-right: 30px;
   font-family: var(--dm-sans-medium);
+  color: var(--dark-red);
   margin: 0;
 }
 
 .media-info .heart {
   position: absolute;
   right: 0px;
+  color: var(--dark-red);
   border-bottom-width: 4px;
   border-bottom-style: solid;
   border-color: transparent;
+}
+
+.heart_full {
+  -webkit-text-fill-color: var(--light-brown);
+  -moz-text-fill-color: var(--light-brown);
 }
 
 .media-info .heart:focus {
