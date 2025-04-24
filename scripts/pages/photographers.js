@@ -1,5 +1,5 @@
 import { mediaTemplate } from "../components/mediaCard.js";
-import { manageLightbox } from "./photographersLightbox.js";
+import { addMediasInLightbox, manageOpeningLightbox } from "./photographersLightbox.js";
 
 
 export function displayMediaPhotographer(artist, artistMedias) {
@@ -10,9 +10,9 @@ export function displayMediaPhotographer(artist, artistMedias) {
     galery.appendChild(mediaCard);
   });
   manageLikes(artist, artistMedias);
-  manageLightbox();
-  // ajouter update lightbox: lesslides doivent être
-  // triées ou recrées à partir du nouveau artistMedia
+  addMediasInLightbox(artistMedias)
+  const allMedias = document.querySelectorAll(".artist-media");
+  manageOpeningLightbox(allMedias)
 }
 
 export function createModalElement(templateCard) {

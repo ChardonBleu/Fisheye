@@ -65,6 +65,7 @@
 }
 
 .sort-menu .select .option p:focus {
+    transform: scale(1);
     border-color: white;
 }
 
