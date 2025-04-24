@@ -1,26 +1,11 @@
-import {
-  dataJsonURL,
-  indexUrlList,
-  photographerUrlList,
-} from "./utils/constants.js";
+import { dataJsonURL, indexUrlList, photographerUrlList } from "./utils/constants.js";
 import { Artist } from "./models/Artist.js";
 import { MediaFactory } from "./factories/mediaFactory.js";
 import { displayIndexPhotographers } from "./pages/index.js";
-import {
-  displayMediaPhotographer
-} from "./pages/photographers.js";
-import {
-  manageModalForm,
-  displayModalForm,
-} from "./pages/photographersForm.js";
-import {
-  displayLightbox,
-} from "./pages/photographersLightbox.js";
-import {
-  manageNavigationSortMenu,
-  manageSortGalery
-} from "./pages/photographersSorting.js";
-
+import { displayMediaPhotographer } from "./pages/photographers.js";
+import { manageModalForm, displayModalForm } from "./pages/photographersForm.js";
+import { displayEmptyLightbox, manageNavLightbox , manageClosingLightbox} from "./pages/photographersLightbox.js";
+import { manageNavigationSortMenu, manageSortGalery } from "./pages/photographersSorting.js";
 
 class App {
   constructor() {
@@ -76,12 +61,13 @@ class App {
       this.artist.displayArtistInfo();           
 
       displayModalForm(this.artist);
+      displayEmptyLightbox();
       manageModalForm();
-      displayLightbox(this.artistMedias);
       manageNavigationSortMenu();
-      manageSortGalery(this.artist, this.artistMedias)
       displayMediaPhotographer(this.artist, this.artistMedias);
-      
+      manageNavLightbox();
+      manageClosingLightbox()
+      manageSortGalery(this.artist, this.artistMedias)
     }
   }
 }

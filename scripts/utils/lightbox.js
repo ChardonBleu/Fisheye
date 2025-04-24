@@ -12,7 +12,6 @@ export function showSlides(n) {
   let i;
   let slides = ""
   slides = document.querySelectorAll(".slide");
-  console.log(slides)
   if (n > slides.length) {
     slideIndex = 1;
   }
