@@ -1,6 +1,6 @@
 import { portraitURL } from "../utils/constants.js";
 
-export default function indexPhotographerTemplate(data) {
+export function indexPhotographerTemplate(data) {
   const picture = portraitURL + `${data.portrait}`;
 
   const article = document.createElement("article");

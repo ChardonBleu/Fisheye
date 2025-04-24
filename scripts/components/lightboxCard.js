@@ -1,4 +1,4 @@
-export default function lightboxTemplate() {
+export function lightboxTemplate() {
   const artistInfo = `
       <div class="lightbox_modal">
         <div aria-label="carousel" class="carousel" aria-label="image closeup view">

@@ -7,15 +7,19 @@ import { Artist } from "./models/Artist.js";
 import { MediaFactory } from "./factories/mediaFactory.js";
 import { displayIndexPhotographers } from "./pages/index.js";
 import {
-  displayMediaPhotographer,
+  displayMediaPhotographer
+} from "./pages/photographers.js";
+import {
   manageModalForm,
   displayModalForm,
+} from "./pages/photographersForm.js";
+import {
   displayLightbox,
-  manageLightbox,
-  manageLikes,
+} from "./pages/photographersLightbox.js";
+import {
   manageNavigationSortMenu,
-  sortGalery
-} from "./pages/photographers.js";
+  manageSortGalery
+} from "./pages/photographersSorting.js";
 
 
 class App {
@@ -64,27 +68,20 @@ class App {
   async main() {
     if (indexUrlList.includes(new URL(document.location).pathname)) {
       await this.fetchPhotographers();
-
       displayIndexPhotographers(this.photographers);
     } else if (
       photographerUrlList.includes(new URL(document.location).pathname)
     ) {
       await this.fetchMedias();
-
-      this.artist.displayArtistInfo();
-
-      displayMediaPhotographer(this.artist, this.artistMedias);
+      this.artist.displayArtistInfo();           
 
       displayModalForm(this.artist);
       manageModalForm();
-
       displayLightbox(this.artistMedias);
-      manageLightbox();
-
-      manageNavigationSortMenu()
-      sortGalery(this.artist, this.artistMedias)
+      manageNavigationSortMenu();
+      manageSortGalery(this.artist, this.artistMedias)
+      displayMediaPhotographer(this.artist, this.artistMedias);
       
-      manageLikes(this.artist, this.artistMedias)
     }
   }
 }

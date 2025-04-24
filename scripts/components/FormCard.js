@@ -1,4 +1,4 @@
-export default function formTemplate(artist) {
+export function formTemplate(artist) {
   const artistInfo = `
     <div class="contact_modal" aria-labelledby="title-modal">
       <header>

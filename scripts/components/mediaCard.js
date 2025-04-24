@@ -1,4 +1,4 @@
-export default function mediaTemplate(media) {
+export function mediaTemplate(media) {
   const article = document.createElement("article");
 
   const artistInfo = `
