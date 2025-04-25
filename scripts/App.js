@@ -1,11 +1,25 @@
-import { dataJsonURL, indexUrlList, photographerUrlList } from "./utils/constants.js";
+import {
+  dataJsonURL,
+  indexUrlList,
+  photographerUrlList,
+} from "./utils/constants.js";
 import { Artist } from "./models/Artist.js";
 import { MediaFactory } from "./factories/mediaFactory.js";
 import { displayIndexPhotographers } from "./pages/index.js";
 import { displayMediaPhotographer } from "./pages/photographers.js";
-import { manageModalForm, displayModalForm } from "./pages/photographersForm.js";
-import { displayEmptyLightbox, manageNavLightbox , manageClosingLightbox} from "./pages/photographersLightbox.js";
-import { manageNavigationSortMenu, manageSortGalery } from "./pages/photographersSorting.js";
+import {
+  manageModalForm,
+  displayModalForm,
+} from "./pages/photographersForm.js";
+import {
+  displayEmptyLightbox,
+  manageNavLightbox,
+  manageClosingLightbox,
+} from "./pages/photographersLightbox.js";
+import {
+  manageNavigationSortMenu,
+  manageSortGalery,
+} from "./pages/photographersSorting.js";
 
 class App {
   constructor() {
@@ -44,7 +58,9 @@ class App {
         .map((video) => new MediaFactory(video, this.artist, "video"));
 
       this.artistMedias = videos.concat(images);
-      this.artistMedias.sort((a, b) => {return b.likes - a.likes});
+      this.artistMedias.sort((a, b) => {
+        return b.likes - a.likes;
+      });
     } else {
       throw new Error("HTTP-Error: " + response.status);
     }
@@ -58,16 +74,16 @@ class App {
       photographerUrlList.includes(new URL(document.location).pathname)
     ) {
       await this.fetchMedias();
-      this.artist.displayArtistInfo();           
 
+      this.artist.displayArtistInfo();
       displayModalForm(this.artist);
       displayEmptyLightbox();
       manageModalForm();
       manageNavigationSortMenu();
       displayMediaPhotographer(this.artist, this.artistMedias);
       manageNavLightbox();
-      manageClosingLightbox()
-      manageSortGalery(this.artist, this.artistMedias)
+      manageClosingLightbox();
+      manageSortGalery(this.artist, this.artistMedias);
     }
   }
 }

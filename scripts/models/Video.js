@@ -59,12 +59,11 @@ export class ArtistVideo {
     if (!this._alreadyLiked) {
       this._likes += 1;
       this._alreadyLiked = true;
-      return true
+      return true;
     } else if (this._alreadyLiked) {
       this._likes -= 1;
       this._alreadyLiked = false;
-      return false
+      return false;
     }
-
   }
 }

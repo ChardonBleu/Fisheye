@@ -10,7 +10,7 @@ export function currentSlide(n) {
 
 export function showSlides(n) {
   let i;
-  let slides = ""
+  let slides = "";
   slides = document.querySelectorAll(".slide");
   if (n > slides.length) {
     slideIndex = 1;
