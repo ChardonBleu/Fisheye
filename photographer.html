@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    >
     <title>Fisheye - photographe</title>
   </head>
   <body>
@@ -20,11 +20,11 @@
         class="nav-link"
         aria-label="navigation vers page accueil FishEye"
       >
-        <img src="assets/images/logo.png" class="logo" alt="Fisheye logo" />
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye logo">
       </a>
     </header>
     <main id="main" aria-hidden="false">
-      <article class="photograph-header"></article>
+      <div class="photograph-header" role="region"></div>
 
       <div class="sort-menu filter-form_shadow">
         <div class="label" id="label">Trier par :</div>
@@ -32,7 +32,7 @@
           class="select"
           aria-label="options de filtration"
           role="listbox"
-          aria-activedescendant="popularity"
+          aria-activedescendant="likes"
           aria-labelledby="label"
           aria-haspopup="listbox"
           aria-expanded="false"
@@ -40,7 +40,7 @@
           <!--  add select_shadow when expanded -->
           <div
             class="option"
-            aria-labeledby="likes"
+            aria-label="likes"
             tabindex="0"
             aria-selected="true"
             role="option"
@@ -64,7 +64,7 @@
 
           <div
             class="option mask"
-            aria-labeledby="date"
+            aria-label="date"
             aria-selected="true"
             role="option"
           >
@@ -73,7 +73,7 @@
 
           <div
             class="option mask"
-            aria-labeledby="title"
+            aria-label="title"
             aria-selected="true"
             role="option"
           >
@@ -81,15 +81,12 @@
           </div>
         </div>
       </div>
-
       <section class="galery" aria-label="galerie du photographe"></section>
-
       <aside
         class="artist-level"
         aria-label="popularité et tarif journalier"
       ></aside>
     </main>
-
     <script type="module" src="scripts/App.js"></script>
   </body>
 </html>

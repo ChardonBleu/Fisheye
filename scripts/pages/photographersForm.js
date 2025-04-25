@@ -3,11 +3,11 @@ import { displayModal, closeModal } from "../utils/modals.js";
 import { formTemplate } from "../components/FormCard.js";
 
 export function displayModalForm(artist) {
-  const body = document.querySelector("body");
+  const main = document.querySelector("main");
   const formCard = formTemplate(artist);
   const formModal = createModalElement(formCard);
   formModal.classList.add("contact");
-  body.appendChild(formModal);
+  main.appendChild(formModal);
 }
 
 function sendFormDatas(form) {

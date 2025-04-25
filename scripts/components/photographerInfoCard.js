@@ -5,7 +5,7 @@ export function photographerInfoTemplate(data) {
 
   const artistInfo = `
     <div class="artist-info" aria-label="Galerie du photographe ${data.name}">
-      <h2 tabindex="0">${data.name}</h2> 
+      <h1 tabindex="0">${data.name}</h1> 
       <p class="location" tabindex="0">${data.city}, ${data.country}</p>
       <p class="tag" tabindex="0">${data.tagline}</p>
     </div>
