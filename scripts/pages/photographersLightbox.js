@@ -1,7 +1,28 @@
-import {lightboxTemplate} from "../components/lightboxCard.js";
-import * as carousel from "../utils/lightbox.js"
-import { createModalElement} from "./photographers.js"
+import { lightboxTemplate } from "../components/lightboxCard.js";
+import * as carousel from "../utils/lightbox.js";
+import { createModalElement } from "./photographers.js";
 import { displayModal, closeModal } from "../utils/modals.js";
+
+export function displayEmptyLightbox() {
+  const main = document.querySelector("main");
+  const lightboxCard = lightboxTemplate();
+  const lightboxModal = createModalElement(lightboxCard);
+  lightboxModal.classList.add("lightbox");
+  main.appendChild(lightboxModal);
+}
+
+export function addMediasInLightbox(artistMedias) {
+  const slidesContainer = document.querySelector(".slides-container");
+  slidesContainer.innerHTML = "";
+
+  artistMedias.forEach((media) => {
+    const slide = document.createElement("li");
+    slide.classList.add("slide");
+    slide.setAttribute("aria-hiddel", "true");
+    slide.innerHTML = media.mediaElement;
+    slidesContainer.appendChild(slide);
+  });
+}
 
 function lightboxPrevNav() {
   carousel.plusSlides(-1);
@@ -10,24 +31,28 @@ function lightboxPrevNav() {
 function lightboxNextNav() {
   carousel.plusSlides(1);
 }
+
 function closeLightbox(lightboxModal) {
-  const allMedias = document.querySelectorAll(".artist-media");    
-  closeModal(allMedias[carousel.slideIndex - 1], lightboxModal)
+  const allMedias = document.querySelectorAll(".artist-media");
+  closeModal(allMedias[carousel.slideIndex - 1], lightboxModal);
 }
 
 export function manageOpeningLightbox(allMedias) {
   const lightboxModal = document.querySelector(".lightbox");
   const closeLightboxBtn = document.querySelector(".close-lightbox");
-  
+
   allMedias.forEach((media, index) => {
     ["keydown", "click"].forEach((evenment) => {
       media.addEventListener(evenment, (event) => {
-        if (evenment === "click" || (evenment === "keydown" && event.key === "Enter")){
+        if (
+          evenment === "click" ||
+          (evenment === "keydown" && event.key === "Enter")
+        ) {
           carousel.currentSlide(index + 1);
           displayModal(closeLightboxBtn, lightboxModal);
         }
       });
-    })
+    });
   });
 }
 
@@ -36,7 +61,7 @@ export function manageClosingLightbox() {
   const closeLightboxBtn = document.querySelector(".close-lightbox");
 
   closeLightboxBtn.addEventListener("click", () => {
-    closeLightbox(lightboxModal)
+    closeLightbox(lightboxModal);
   });
 
   lightboxModal.addEventListener("keydown", (event) => {
@@ -45,7 +70,7 @@ export function manageClosingLightbox() {
       (event.key === "Escape" ||
         (document.activeElement == closeLightboxBtn && event.key === "Enter"))
     ) {
-      closeLightbox(lightboxModal)
+      closeLightbox(lightboxModal);
     }
   });
 }
@@ -57,43 +82,19 @@ export function manageNavLightbox() {
 
   prev.addEventListener("click", lightboxPrevNav);
   next.addEventListener("click", lightboxNextNav);
-  
 
   lightboxModal.addEventListener("keydown", (event) => {
     if (
       (event.key === "Enter" && document.activeElement == prev) ||
       event.key === "ArrowLeft"
     ) {
-      lightboxPrevNav()
+      lightboxPrevNav();
     }
     if (
       (event.key === "Enter" && document.activeElement == next) ||
       event.key === "ArrowRight"
     ) {
-      lightboxNextNav()
+      lightboxNextNav();
     }
   });
 }
-
-export function displayEmptyLightbox() {
-  const main = document.querySelector("main");
-  const lightboxCard = lightboxTemplate();
-  const lightboxModal = createModalElement(lightboxCard);
-  lightboxModal.classList.add("lightbox");
-  main.appendChild(lightboxModal);
-}
-
-
-export function addMediasInLightbox(artistMedias) {
-  const slidesContainer = document.querySelector(".slides-container");
-  slidesContainer.innerHTML = ""
-
-  artistMedias.forEach((media) => {
-    const slide = document.createElement("li");
-    slide.classList.add("slide");
-    slide.setAttribute("aria-hiddel", "true");
-    slide.innerHTML = media.mediaElement;
-    slidesContainer.appendChild(slide);
-  });
-}
-

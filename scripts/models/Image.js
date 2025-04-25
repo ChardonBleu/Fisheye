@@ -58,11 +58,11 @@ export class ArtistImage {
     if (!this._alreadyLiked) {
       this._likes += 1;
       this._alreadyLiked = true;
-      return true
-    } else if(this._alreadyLiked) {
+      return true;
+    } else if (this._alreadyLiked) {
       this._likes -= 1;
       this._alreadyLiked = false;
-      return false
+      return false;
     }
   }
 }
