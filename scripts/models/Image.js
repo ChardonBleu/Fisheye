@@ -50,6 +50,10 @@ export class ArtistImage {
     return this._title;
   }
 
+  get alreadyLiked() {
+    return this._alreadyLiked;
+  }
+
   artistFolder() {
     return this._artist.name.split(" ").join("");
   }
