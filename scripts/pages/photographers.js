@@ -10,6 +10,10 @@ export function displayMediaPhotographer(artist, artistMedias) {
   artistMedias.forEach((media) => {
     const mediaCard = mediaTemplate(media, artist.name);
     galery.appendChild(mediaCard);
+    const likeBtn = mediaCard.querySelector(".heart");
+    if (media.alreadyLiked) {
+      likeBtn.classList.add("heart_full");
+    }
   });
   manageLikes(artist, artistMedias);
   addMediasInLightbox(artistMedias);

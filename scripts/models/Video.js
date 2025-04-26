@@ -50,6 +50,10 @@ export class ArtistVideo {
     return this._title;
   }
 
+  get alreadyLiked() {
+    return this._alreadyLiked;
+  }
+
   artistFolder() {
     const folder = this._artist.name.split(" ").join("");
     return folder;
