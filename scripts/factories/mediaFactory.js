@@ -3,12 +3,13 @@ import { ArtistVideo } from "../models/Video.js";
 
 export class MediaFactory {
   constructor(data, artist, type) {
-    if (type === "image") {
-      return new ArtistImage(data, artist);
-    } else if (type === "video") {
-      return new ArtistVideo(data, artist);
-    } else {
-      throw "Unknown type";
+    switch (type) {
+      case "image":
+        return new ArtistImage(data, artist);
+      case "video":
+        return new ArtistVideo(data, artist);
+      default:
+        throw "Unknown type";
     }
   }
 }

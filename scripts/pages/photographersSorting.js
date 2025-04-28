@@ -38,12 +38,9 @@ function closeSortMenu(
 }
 
 export function manageNavigationSortMenu() {
-  ["keydown", "click"].forEach((evenment) => {
-    openFilterMenuBtn.addEventListener(evenment, (event) => {
-      if (
-        evenment === "click" ||
-        (evenment === "keydown" && event.key === "Enter")
-      ) {
+  ["keydown", "click"].forEach((evt) => {
+    openFilterMenuBtn.addEventListener(evt, (event) => {
+      if (evt === "click" || (evt === "keydown" && event.key === "Enter")) {
         openSortMenu(
           openFilterMenuBtn,
           closeFilterMenuBtn,
@@ -54,12 +51,9 @@ export function manageNavigationSortMenu() {
     });
   });
 
-  ["keydown", "click"].forEach((evenment) => {
-    closeFilterMenuBtn.addEventListener(evenment, (event) => {
-      if (
-        evenment === "click" ||
-        (evenment === "keydown" && event.key === "Enter")
-      ) {
+  ["keydown", "click"].forEach((evt) => {
+    closeFilterMenuBtn.addEventListener(evt, (event) => {
+      if (evt === "click" || (evt === "keydown" && event.key === "Enter")) {
         closeSortMenu(
           openFilterMenuBtn,
           closeFilterMenuBtn,
@@ -75,12 +69,9 @@ export function manageSortGalery(artist, artistMedias) {
   const allOptionsTarget = document.querySelectorAll(".option p");
 
   allOptionsTarget.forEach((option) => {
-    ["keydown", "click"].forEach((evenment) => {
-      option.addEventListener(evenment, (event) => {
-        if (
-          evenment === "click" ||
-          (evenment === "keydown" && event.key === "Enter")
-        ) {
+    ["keydown", "click"].forEach((evt) => {
+      option.addEventListener(evt, (event) => {
+        if (evt === "click" || (evt === "keydown" && event.key === "Enter")) {
           const allOptionsTarget = document.querySelectorAll(".option p");
           const firstOption = allOptionsTarget[0];
           const parentOption = option.parentElement;
