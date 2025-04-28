@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.photograph-header h2 {
+.photograph-header h1 {
   font-size: 3.556em;
   color: var(--light-brown);
   margin: 0;
