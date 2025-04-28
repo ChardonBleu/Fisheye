@@ -21,9 +21,9 @@ export function formTemplate(artist) {
               minlength="2"
               required>
         <label for="mail">Email</label>
-        <input class="field" id="mail" type="email" name="mail">
+        <input class="field" id="mail" type="email" name="mail" required>
         <label for="message">Votre message</label>
-        <textarea class="field" id="message" type="text" name="message"></textarea> 
+        <textarea class="field" id="message" type="text" name="message" required minlength="2"></textarea> 
         <button class="form-button">Envoyer</button>
       </form>
     </div>

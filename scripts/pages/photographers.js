@@ -39,12 +39,9 @@ function manageLikes(artist, artistMedias) {
     );
     artist.displayAsideInfo(totalLikes);
 
-    ["keydown", "click"].forEach((evenment) => {
-      likeBtn.addEventListener(evenment, (event) => {
-        if (
-          evenment === "click" ||
-          (evenment === "keydown" && event.key === "Enter")
-        ) {
+    ["keydown", "click"].forEach((evt) => {
+      likeBtn.addEventListener(evt, (event) => {
+        if (evt === "click" || (evt === "keydown" && event.key === "Enter")) {
           const photoTitle =
             likeBtn.parentElement.querySelector("h2").textContent;
           const currentMedia = artistMedias.filter(

@@ -63,7 +63,7 @@ export class ArtistImage {
       this._likes += 1;
       this._alreadyLiked = true;
       return true;
-    } else if (this._alreadyLiked) {
+    } else {
       this._likes -= 1;
       this._alreadyLiked = false;
       return false;

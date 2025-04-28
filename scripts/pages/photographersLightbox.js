@@ -42,12 +42,9 @@ export function manageOpeningLightbox(allMedias) {
   const closeLightboxBtn = document.querySelector(".close-lightbox");
 
   allMedias.forEach((media, index) => {
-    ["keydown", "click"].forEach((evenment) => {
-      media.addEventListener(evenment, (event) => {
-        if (
-          evenment === "click" ||
-          (evenment === "keydown" && event.key === "Enter")
-        ) {
+    ["keydown", "click"].forEach((evt) => {
+      media.addEventListener(evt, (event) => {
+        if (evt === "click" || (evt === "keydown" && event.key === "Enter")) {
           carousel.currentSlide(index + 1);
           displayModal(closeLightboxBtn, lightboxModal);
         }

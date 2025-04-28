@@ -1,5 +1,7 @@
-import { indexPhotographerTemplate } from "../components/indexPhotographerCard.js";
-import { photographerInfoTemplate } from "../components/photographerInfoCard.js";
+import {
+  photographerInfoTemplate,
+  indexPhotographerTemplate,
+} from "../components/photographerInfoCard.js";
 
 export class Artist {
   constructor(data) {
