@@ -18,7 +18,7 @@ export function addMediasInLightbox(artistMedias) {
   artistMedias.forEach((media) => {
     const slide = document.createElement("li");
     slide.classList.add("slide");
-    slide.setAttribute("aria-hiddel", "true");
+    slide.setAttribute("aria-hidden", "true");
     slide.innerHTML = media.mediaElement;
     slidesContainer.appendChild(slide);
   });
