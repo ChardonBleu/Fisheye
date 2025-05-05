@@ -60,6 +60,7 @@
   border-color: transparent;
   height: 1em;
   margin: 10px;
+  cursor: pointer;
 }
 
 .chevron-right {
@@ -70,6 +71,7 @@
   border-color: transparent;
   height: 1em;
   margin: 10px;
+  cursor: pointer;
 }
 
 .close-lightbox {
@@ -82,6 +84,7 @@
   border-bottom-style: solid;
   border-color: transparent;
   height: 1em;
+  cursor: pointer;
 }
 
 .close-lightbox:focus,
