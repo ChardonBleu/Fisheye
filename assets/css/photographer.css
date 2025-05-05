@@ -64,6 +64,7 @@
   border-bottom-width: 4px;
   border-bottom-style: solid;
   border-color: transparent;
+  cursor: pointer;
 }
 
 .artist-media:focus {
@@ -104,6 +105,7 @@
   border-bottom-width: 4px;
   border-bottom-style: solid;
   border-color: transparent;
+  cursor: pointer;
 }
 
 .heart_full {
